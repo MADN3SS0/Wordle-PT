@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Wordle em Português</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="v3.css">
+</head>
+<body>
+    
+    <div id="login-area">
+        <h2>Login</h2>
+        <div id="login-form">
+            <input type="email" id="email" placeholder="Email" autocomplete="email">
+            <input type="password" id="senha" placeholder="Senha" autocomplete="current-password">
+            <button id="login-btn">Entrar</button>
+            <p id="switch-to-signup">Não tem conta? <a href="#" id="signup-link">Registe-se aqui</a></p>
+            <div id="login-msg"></div>
+        </div>
+
+        <div id="signup-form" style="display:none;">
+            <h2>Registo</h2>
+            <input type="text" id="nome" placeholder="Nome" autocomplete="username">
+            <input type="email" id="new-email" placeholder="Email" autocomplete="email">
+            <input type="password" id="new-senha" placeholder="Senha" autocomplete="new-password">
+            <button id="signup-btn">Registar</button>
+            <p id="switch-to-login">Já tem conta? <a href="#" id="login-link">Faça login aqui</a></p>
+            <div id="signup-msg"></div>
+        </div>
+    </div>
+
+    <main style="display:none;">
+        <h1>Wordle PT</h1>
+        <p class="subtitle">Tente adivinhar a palavra secreta de 4 letras em até 6 tentativas!</p>
+        <p id="user-info"></p>
+        <div id="game-board" aria-label="Tabuleiro do jogo"></div>
+        <form id="guess-form" autocomplete="off">
+            <input type="text" id="guess-input" maxlength="4" pattern="[a-zA-Z]{4}" placeholder="Digite 4 letras" required autofocus>
+            <button type="submit" id="guess-btn">Tentar</button>
+        </form>
+        <div id="message" role="alert"></div>
+        <button id="restart-btn" style="display:none;">Jogar Novamente</button>
+    </main>
+
+    <div id="leaderboard-area" style="display:none;">
+        <h2>Ranking</h2>
+        <ol id="leaderboard"></ol>
+    </div>
+
+    <footer>
+        <p>© 2025 madn3ss. Todos os direitos reservados.</p>
+        <p>Pode testar o jogo no seu computador, <strong>mas não pode copiar, modificar ou distribuir o código sem permissão.</strong></p>
+    </footer>
+    <script src="v3.js"></script>
+</body>
+</html>
